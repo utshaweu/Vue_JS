@@ -41,8 +41,9 @@ export default {
     toggle(){
       this.visible = !this.visible;
     },
-    handlerClosePersonComponent(){
-      alert("x")
+    handlerClosePersonComponent(event){
+      console.log(event);
+      this.visible = false;
     }
   }
   
