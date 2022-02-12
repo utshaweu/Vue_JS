@@ -7,7 +7,7 @@
 
       <button @click="toggle" class="text-white bg-blue-600 hover:bg-blue-500 py-2 px-4 mr-3">toggle</button>
 
-      <Person :name="name" :age="age" v-if="visible"/>
+      <Person @close="handlerClosePersonComponent" :name="name" :age="age" v-if="visible"/>
 
       <template #sidebar-left>
         <h1>Sidebar Left</h1>
@@ -40,7 +40,11 @@ export default {
   methods: {
     toggle(){
       this.visible = !this.visible;
+    },
+    handlerClosePersonComponent(){
+      alert("x")
     }
   }
+  
 };
 </script>
